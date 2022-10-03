@@ -1,5 +1,6 @@
 import CartItens from "./style";
 import cartPrice from "../cartPrice";
+import EmptyCart from "../emptyCart";
 
 const Cart = ({ cart, setCart }) => {
   console.log(cart);
@@ -13,9 +14,7 @@ const Cart = ({ cart, setCart }) => {
         <h2>Carrinho de Compras</h2>
       </section>
       {cart.length === 0 ? (
-        <ul>
-          <h1>Nenhum item</h1>
-        </ul>
+        <EmptyCart />
       ) : (
         <ul>
           {cart.map((item) => (
@@ -30,7 +29,6 @@ const Cart = ({ cart, setCart }) => {
           ))}
         </ul>
       )}
-      <cartPrice cart={cart} />
     </CartItens>
   );
 };

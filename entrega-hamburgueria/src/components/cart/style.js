@@ -18,6 +18,7 @@ const CartItens = styled.section`
   }
   h2 {
     font-size: var(--font-size4);
+    color: white;
   }
   ul {
     margin-top: 5px;
