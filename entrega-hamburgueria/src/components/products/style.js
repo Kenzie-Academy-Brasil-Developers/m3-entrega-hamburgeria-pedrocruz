@@ -6,14 +6,13 @@ const ProductsItens = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 
   li {
     min-width: 300px;
     height: 350px;
     border: solid 1px var(--main-color4);
     border-radius: 8px;
-    gap: 15px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -30,10 +29,10 @@ const ProductsItens = styled.ul`
     height: 100%;
   }
   div {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
     gap: 20px;
+    width: 90%;
+    margin: auto;
+    display: flex;
     flex-direction: column;
   }
   h2 {

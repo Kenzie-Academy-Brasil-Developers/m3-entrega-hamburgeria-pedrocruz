@@ -1,9 +1,10 @@
-import priceCart from "./style";
-const cartPrice = () => {
+import boxPrice from "./style";
+const cartPrice = ({ cart }) => {
+  console.log(cart);
   return (
-    <priceCart>
+    <boxPrice>
       <h1>hello</h1>
-    </priceCart>
+    </boxPrice>
   );
 };
 export default cartPrice;
