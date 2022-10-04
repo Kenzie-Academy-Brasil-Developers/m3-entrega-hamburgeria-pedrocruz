@@ -1,26 +1,20 @@
 import HeaderItens from "./style";
 import logo from "../../assets/logo.svg";
+import InputSearch from "../inputSearch";
+import { useEffect, useState } from "react";
+import Api from "../../services/Api";
 
 const Header = ({ itens, setItens }) => {
-  const searchValue = (value) => {
-    const resp = itens.filter((element) => {
-      if (element.name.includes(value)) {
-        setItens([...itens, element]);
-      }
-    });
-  };
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    Api.then((resp) => setData(resp.data)).catch((error) => console.log(error));
+  }, []);
+  console.log(data);
   return (
     <HeaderItens>
       <div>
-        <img src={logo} alt="" />
-        <form action="">
-          <input
-            type="text"
-            onChange={(event) => setItens(event.target.value)}
-            placeholder="Digitar pesquisa"
-          />
-          <button className="btn">pesquisar</button>
-        </form>
+        <img src={logo} onClick={() => setItens(data)} alt="" />
+        <InputSearch itens={itens} setItens={setItens} />
       </div>
     </HeaderItens>
   );

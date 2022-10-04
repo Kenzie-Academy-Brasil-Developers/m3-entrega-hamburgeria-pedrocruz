@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderItens = styled.header`
   width: 100%;
-  height: 80px;
+  height: 100px;
   background-color: var(--main-color4);
   display: flex;
   align-items: center;
@@ -10,6 +10,9 @@ const HeaderItens = styled.header`
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin-bottom: 40px;
 
+  img {
+    cursor: pointer;
+  }
   /* div */
   div {
     width: 80%;
@@ -18,25 +21,16 @@ const HeaderItens = styled.header`
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-    overflow-y: auto;
+    flex-wrap: wrap;
   }
 
-  form {
-    width: 280px;
-    height: 40px;
-    border: solid 1px var(--main-color6);
-    display: flex;
-    background-color: var(--main-color3);
-    border-radius: 8px;
-    align-items: center;
-    justify-content: space-around;
-  }
-  input {
-    width: 110px;
-    border: solid 0px rgba(0, 0, 0, 0);
-    background-color: var(--main-color3);
-    border-radius: 8px;
-    font-size: 1rem;
+  @media (max-width: 750px) {
+    img {
+      margin: 0 auto;
+    }
+    form {
+      margin: 0 auto;
+    }
   }
 `;
 export default HeaderItens;

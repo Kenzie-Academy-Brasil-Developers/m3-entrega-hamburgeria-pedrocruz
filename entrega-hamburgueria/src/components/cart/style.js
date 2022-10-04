@@ -6,6 +6,9 @@ const CartItens = styled.section`
   height: 450px;
   background-color: var(--main-color3);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
   /* div */
   section {
     width: 100%;
@@ -22,42 +25,15 @@ const CartItens = styled.section`
   }
   ul {
     margin-top: 5px;
+    margin-bottom: 10px;
     width: 100%;
     height: 75%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     overflow-x: auto;
+    border-bottom: solid 2px var(--main-color4);
   }
-  li {
-    width: 90%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-  div {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0;
-  }
-  img {
-    width: 50px;
-    height: 50px;
-    background-color: var(--main-color3);
-  }
-  h4 {
-    font-size: 16px;
-  }
-  span {
-    font-size: 14px;
-  }
-  button {
-    font-size: 16px;
-    border: none;
-  }
+
   @media (max-width: 750px) {
     width: 80%;
   }

@@ -7,9 +7,10 @@ const ProductsItens = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 15px;
+  margin-bottom: 40px;
 
   li {
-    min-width: 300px;
+    min-width: 270px;
     height: 350px;
     border: solid 1px var(--main-color4);
     border-radius: 8px;
@@ -36,7 +37,7 @@ const ProductsItens = styled.ul`
     flex-direction: column;
   }
   h2 {
-    font-size: var(--font-size3);
+    font-size: var(--text-size3);
   }
   p {
     font-size: 16px;
