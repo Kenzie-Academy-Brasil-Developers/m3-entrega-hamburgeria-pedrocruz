@@ -1,10 +1,14 @@
-import boxPrice from "./style";
-const cartPrice = ({ cart }) => {
+import BoxPrice from "./style";
+const CartPrice = ({ cart, setCart }) => {
   console.log(cart);
+  const price = cart.reduce((acc, cur) => acc + cur.price, 0);
+
   return (
-    <boxPrice>
-      <h1>hello</h1>
-    </boxPrice>
+    <BoxPrice>
+      <h3>Total:</h3>
+      <span> R${price.toFixed(2)}</span>
+      <button onClick={() => setCart([])}>Remover Tudo</button>
+    </BoxPrice>
   );
 };
-export default cartPrice;
+export default CartPrice;

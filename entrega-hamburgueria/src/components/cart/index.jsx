@@ -1,13 +1,9 @@
 import CartItens from "./style";
-import cartPrice from "../cartPrice";
 import EmptyCart from "../emptyCart";
+import CartBox from "../cartBox";
+import CartPrice from "../cartPrice";
 
-const Cart = ({ cart, setCart }) => {
-  console.log(cart);
-  const removeItem = (id) => {
-    const remove = cart.filter((Element) => Element.id !== id);
-    setCart(remove);
-  };
+const Cart = ({ cart, setCart, removeItem }) => {
   return (
     <CartItens>
       <section>
@@ -16,18 +12,12 @@ const Cart = ({ cart, setCart }) => {
       {cart.length === 0 ? (
         <EmptyCart />
       ) : (
-        <ul>
-          {cart.map((item) => (
-            <li key={item.id}>
-              <div>
-                <img src={item.img} alt="" />
-                <h4>{item.name}</h4>
-                <span>R$:{item.price}</span>
-              </div>
-              <button onClick={() => removeItem(item.id)}>Remover</button>
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul>
+            <CartBox cart={cart} removeItem={removeItem} />
+          </ul>
+          <CartPrice cart={cart} setCart={setCart} />
+        </>
       )}
     </CartItens>
   );

@@ -61,23 +61,24 @@ export default createGlobalStyle`
     color: var(--main-color3);
     height: 30px;
   }
+  
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--main-color);
+    background: var(--main-color4);
     margin: 1rem;
     border-radius: 1.6rem;
   }
  
   ::-webkit-scrollbar-thumb {
-    background: var(--main-color5);
+    background: var(--main-color2);
     border-radius: 1.6rem;
   }
  
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--main-color5);
+    background: var(--main-color);
   }
 `;

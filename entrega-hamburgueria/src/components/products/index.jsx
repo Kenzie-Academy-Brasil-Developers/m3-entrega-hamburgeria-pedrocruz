@@ -12,8 +12,8 @@ const Products = ({ itens, addToCart }) => {
           <div>
             <h2>{item.name}</h2>
             <p>{item.category}</p>
-            <span>R$:{item.price}</span>
-            <button className="btn" onClick={() => addToCart(item)}>
+            <span>R$:{item.price.toFixed(2)}</span>
+            <button className="btn" onClick={() => addToCart(item, item.id)}>
               Adicionar
             </button>
           </div>
