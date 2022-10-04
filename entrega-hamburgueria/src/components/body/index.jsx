@@ -5,6 +5,7 @@ import BodyItens from "./style";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ErroSearch from "../erroSearch";
 
 const Body = ({ itens }) => {
   const [cart, setCart] = useState([]);
@@ -27,7 +28,11 @@ const Body = ({ itens }) => {
     <BodyItens>
       <ToastContainer />
       <div>
-        <Products itens={itens} addToCart={addToCart} />
+        {itens.length === 0 ? (
+          <ErroSearch />
+        ) : (
+          <Products itens={itens} addToCart={addToCart} />
+        )}
         <Cart
           cart={cart}
           setCart={setCart}
